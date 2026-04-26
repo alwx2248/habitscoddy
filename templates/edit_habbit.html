@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Редактировать привычку </h2>
+<form method="POST">
+	<p>
+		<label>Название:</label><br>
+		<input type="text" name="name" value="{{ habit.name }}" required>
+	</p>
+	<p>
+		<label>Цель дней:</label><br>
+		<input type="number" name="goal" value="{{ habit.goal }}" min="1">
+	</p>
+	<button type="submit"> Сохранить </button>
+	<a href="/habit/{{ habit.id }}"> Отмена </a>
+
+</form>
+{% endblock %}
