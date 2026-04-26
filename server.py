@@ -116,7 +116,7 @@ def edit_habit(habit_id):
         habit['goal'] = new_goal
         return redirect(url_for('habit_detail', habit_id=habit_id))
         
-    return render_template('add_habit.html', habit=habit) # Используем тот же шаблон или создайте edit_habit.html
+    return render_template('edit_habit.html', habit=habit) # Используем тот же шаблон или создайте edit_habit.html
 
 @app.route('/toggle/<int:habit_id>')
 def toggle_habit(habit_id): # Переименовали, чтобы не было конфликта
