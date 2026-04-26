@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{& block content %}
+<h2>Глобальная статистика</h2>
+<h3>общая информация:</h3>
+<ul>
+	<li>Всего привычек {{ total_habits }}</li>
+	<li>Активных привычек {{ active_habits }}</li>
+	<li>Вего выполненных дней {{ total_completed }}</li>
+</ul>
+
+{% if best_habit %}
+<h3>Лучшая привычка</h3>
+<ul>
+	<li>Название {{ best_habit.name }}</li>
+	<li>Успех {{ best_rate }}</li>
+</ul>
+
+{% endif %}
+
+<p><a href="/"> На главную</a></p>
+{% endblock %}
